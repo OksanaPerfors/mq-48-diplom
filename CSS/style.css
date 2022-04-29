@@ -36,13 +36,25 @@ input {
   outline: none;
 }
 
+.header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu-btn {
+  width: 23px;
+  height: 20px;
+  position: relative;
+  z-index:2;
+  overflow: hidden;
+}
 .flex-container {
   max-width: 1200px;
-  padding-left: 45px;
-  padding-right: 45px;
+  padding-left: 15px;
+  padding-right: 15px;
   align-items: center;
-  
 }
+
 .welcome {
   background-image: url("../img/banner-bg.jpg");
   background-repeat: no-repeat;
@@ -342,13 +354,16 @@ input {
   font-family: inherit;
 }
 
+.send-block {
+  margin-bottom: 60px;
+}
+
 .send {
   box-sizing: border-box;
   border: none;
   height: 48px;
   width: 100%;
   background-color: #b59f5b;
-  margin-bottom: 60px;
 }
 
 .send:hover {
@@ -363,12 +378,15 @@ input {
   text-transform: uppercase;
 }
 
+.tags-block {
+  margin-bottom: 60px;
+}
+
 .tags-list {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   width: 100%;
-  margin-bottom: 60px;
 }
 
 .tags-list-item {
@@ -509,6 +527,7 @@ input {
   max-width: 100%;
   margin-bottom: 63px;
   align-items: flex-end;
+  justify-content: center;
 }
 
 .trend-block {
@@ -549,7 +568,7 @@ input {
   background-position: center center;
   background-size: cover;
   background-color: #000000;
-  width: 25%;
+  width: 24%;
   margin-right: 4px;
 }
 
@@ -559,7 +578,7 @@ input {
   background-position: center center;
   background-size: cover;
   background-color: #000000;
-  width: 25%;
+  width: 24%;
   margin-right: 4px;
 }
 
@@ -569,7 +588,7 @@ input {
   background-position: center center;
   background-size: cover;
   background-color: #000000;
-  width: 25%;
+  width: 24%;
   margin-right: 4px;
 }
 
@@ -579,7 +598,7 @@ input {
   background-position: center center;
   background-size: cover;
   background-color: #000000;
-  width: 25%;
+  width: 24%;
 }
 
 .trend-sub {
@@ -597,22 +616,21 @@ input {
 .store {
   display: flex;
   max-width: 1200px;
-  padding: 0 15px;
   margin: auto;
   justify-content: space-between;
+  padding-bottom: 40px;
 }
 
 .store-box{
   display: flex;
   flex-direction: column;
-  max-width: 347px;
-  
-
+  max-width: 30%;
+  align-items: center;
 }
 
 .store-pic {
   display: flex;
-  justify-content: center;
+  align-items: center;
 }
 
 .store-img {
@@ -626,8 +644,6 @@ input {
   max-height: 264px;
   outline-offset: 28px;
   padding-top: 27px;
-  padding-bottom: 40px;
-  margin-left: 20px;
   flex-grow: 1;
 }
 
@@ -660,10 +676,6 @@ input {
   justify-content: space-between;
 }
 
-.sale {
-  display: flex;
-  flex-direction: column;
-}
 
 .old-price {
   color: #0f0d0e;
@@ -689,7 +701,7 @@ input {
   background-color: #b59f5b;
 }
 
-.popup {
+/*.popup {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -790,20 +802,6 @@ input {
   position: absolute;
 }
 
-.radio-group-text::after {
-  content: "";
-  display: inline-block;
-  margin-right: 4px;
-  width: 17px;
-  height: 17px;
-  background-image: url("../svg/form-circle.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 17px;
-  vertical-align: middle;
-  position: absolute;
-}
-
 .radio-group:nth-of-type(n+2) {
   margin-left: 38px;
 }
@@ -818,6 +816,10 @@ input {
   outline-offset: 1px;
 }
 
+.radio:checked ~ .radio-group-text::before {
+  background-image: url("../svg/form-circle.svg");
+}
+
 .radio {
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
@@ -825,8 +827,10 @@ input {
 }
 
 .textarea {
-  width: 100%;
-  height: 130px;
+  min-width: 330px;
+  max-width: 330px;
+  min-height: 130px;
+  max-height: 130px;
   padding: 20px;
   margin-top: 12px;
   font-family: inherit;
@@ -834,5 +838,41 @@ input {
 
 .popup-send {
   margin-top: 26px;
-  margin-bottom: 0px;
+}*/
+
+@media (min-width: 641px) and (max-width: 1199px) {
+  .welcome {
+  background-image: url("../img/banner-bg-tablet.jpg")
 }
+  .nav__list {
+    visibility: hidden;
+}
+  .wrap {
+    flex-wrap: wrap;
+  }
+
+  .one, .two, .three, .four {
+    width: 49%;
+  } 
+
+/*@media (max-width: 640px) and (orientation: landscape) {
+  .welcome {
+  background-image: url("../img/banner-mobile.jpg")
+}
+  .nav__list {
+    visibility: hidden;
+}
+  .wrap {
+    flex-wrap: wrap;
+} 
+
+/*@media (max-width: 640px) and (orientation: portrait) {
+  .welcome {
+  background-image: url("../img/banner-mobile.jpg")
+}
+  .nav__list {
+    visibility: hidden;
+}
+  .wrap {
+    flex-wrap: wrap;
+} 
