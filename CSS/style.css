@@ -108,6 +108,10 @@ input {
   margin-left: 35px;
 }
 
+.menu {
+  display: none;
+}
+
 .container-title {
   display: block;
   max-width: 690px;
@@ -819,47 +823,52 @@ input {
 }
 
 .menu {
-  visibility: hidden;
+  display: none;
 }
 
 .menu-btn {
   width: 30px;
   height: 30px;
-  position: absolute;
+  position: relative;
 
   z-index:2;
   overflow: hidden;
 }
-.menu-btn span {
+.menu-btn button {
   width: 22px;
   height: 2px;
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   background-color: #ffffff;
 }
-.menu-btn span:nth-of-type(2) {
+.menu-btn button:nth-of-type(2) {
   top: calc(50% - 5px);
 }
-.menu-btn span:nth-of-type(3) {
+.menu-btn button:nth-of-type(3) {
   top: calc(50% + 5px);
 }
 
 .nav__list {
-  visibility: hidden;
+  display: none;
 }
 
 .wrap {
   flex-wrap: wrap;
 }
 
+.store-container {
+  width: 100vw;
+}
+
 .store {
   flex-wrap: wrap;
 }
 
-.trend {
-  width: 100vw;
+.store-box {
+  width: 48%;
 }
+
 
 .welcome {
   width: 100vw;
@@ -869,40 +878,84 @@ input {
   width: 49%;
 } 
 
-@media (max-width: 640px) and (orientation: landscape) {
+/*@media (max-width: 640px) and (orientation: landscape) {
   .welcome {
   background-image: url("../img/banner-mobile.jpg")
-}
+  }
+
+  .menu {
+   display: none;
+  }
+
+  .menu-btn {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index:2;
+    overflow: hidden;
+  }
+
+  .menu-btn button {
+    width: 22px;
+    height: 2px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    background-color: #ffffff;
+  }
+
+  .menu-btn button:nth-of-type(2) {
+    top: calc(50% - 5px);
+  }
+
+  .menu-btn button:nth-of-type(3) {
+    top: calc(50% + 5px);
+  }
+
   .nav__list {
-    visibility: hidden;
-}
+    display: none;
+  }
+
   .wrap {
     flex-wrap: wrap;
   }
 
-.container-page {
+  .container-page {
     flex-wrap: wrap;
   }
 
-.store {
-  flex-wrap: wrap;
+  .store {
+    flex-wrap: wrap;
+  }
+
+  .one, .two, .three, .four {
+    width: 99%;
+  } 
+
 }
 
 @media (max-width: 640px) and (orientation: portrait) {
   .welcome {
   background-image: url("../img/banner-mobile.jpg")
-}
+  }
+
   .nav__list {
-    visibility: hidden;
-}
+    display: none;
+  }
+
   .wrap {
     flex-wrap: wrap;
   }
 
-.container-page {
+  .container-page {
     flex-wrap: wrap;
   }
 
-.store {
-  flex-wrap: wrap;
+  .store {
+    flex-wrap: wrap;
+  }
+
+  .one, .two, .three, .four {
+    width: 99%;
+  } 
 }
