@@ -840,8 +840,9 @@ input {
   }
 
   .menu-btn button {
-    width: 22px;
-    height: 2px;
+    display: block;
+    width: 23px;
+    height: 4px;
     position: relative;
     top: 50%;
     left: 50%;
@@ -849,11 +850,12 @@ input {
   }
 
  .menu-btn, button:nth-of-type(2) {
-    top: calc(50% - 5px);
+    top: 4px;
   }
 
   .menu-btn, button:nth-of-type(3) {
-    top: calc(50% - 5px);
+    top: auto;
+    bottom: 0;
   }
 
   .nav__list {
