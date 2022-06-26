@@ -238,7 +238,7 @@ input {
 }
 
 .aside-content {
-  max-width: 270px;
+  min-width: 270px;
 }
 
 .aside-header {
@@ -532,7 +532,6 @@ input {
   max-width: 100%;
   margin-bottom: 63px;
   align-items: flex-end;
-  justify-content: space-between;
 }
 
 .trend-block {
@@ -581,6 +580,10 @@ input {
 
 .four {
   background-image: url("../IMG/trend4.jpg");
+}
+
+.one, .two, .three {
+  margin-right: 4px;
 }
 
 .trend-sub {
@@ -681,6 +684,11 @@ input {
   height: 48px;
   width: 140px;
   background-color: #b59f5b;
+}
+
+.store-go:hover {
+  border-top: 1px solid #b9b29b;
+  background-color: #323232;
 }
 
 .popup {
@@ -832,29 +840,34 @@ input {
 
   .menu-btn {
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 23px;
+    height: 20px;
     position: relative;
     z-index:2;
-    
   }
 
-  .menu-btn button {
-    display: block;
-    width: 23px;
-    height: 4px;
-    position: relative;
-    top: 50%;
-    left: 50%;
+  .menu-btn span {
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: 9px;
+    left: 0;
     background-color: #ffffff;
   }
-
- .menu-btn, button:nth-of-type(2) {
-    top: 4px;
+  .menu-btn:before, .menu-btn:after {
+    content: '';
+    background-color: #ffffff;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
   }
 
-  .menu-btn, button:nth-of-type(3) {
-    top: auto;
+  .menu-btn:before {
+    top: 0;
+  }
+
+  .menu-btn:after {
     bottom: 0;
   }
 
@@ -934,31 +947,40 @@ input {
   }
 
   .menu {
-   display: none;
+    display: none;
   }
 
   .menu-btn {
-    width: 30px;
-    height: 30px;
+    display: block;
+    width: 23px;
+    height: 20px;
     position: relative;
     z-index:2;
   }
 
-  .menu-btn button {
-    width: 22px;
-    height: 2px;
-    position: relative;
-    top: 50%;
-    left: 50%;
+  .menu-btn span {
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: 9px;
+    left: 0;
     background-color: #ffffff;
   }
-
-  .menu-btn button:nth-of-type(2) {
-    top: calc(50% - 5px);
+  .menu-btn:before, .menu-btn:after {
+    content: '';
+    background-color: #ffffff;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
   }
 
-  .menu-btn button:nth-of-type(3) {
-    top: calc(50% - 5px);
+  .menu-btn:before {
+    top: 0;
+  }
+
+  .menu-btn:after {
+    bottom: 0;
   }
 
   .nav {
@@ -967,6 +989,11 @@ input {
 
   .nav__list {
     display: none;
+  }
+
+  .trend-block {
+    width: 100%;
+
   }
 
   .block {
@@ -986,7 +1013,6 @@ input {
     flex-wrap: wrap;
   }
 
-
   .store {
     flex-wrap: wrap;
   }
@@ -999,15 +1025,77 @@ input {
     width: 100vw;
   }
 
-  .one, .two, .three, .four {
-    width: 99%;
-  } 
+
 
 }
 
 @media (max-width: 640px) and (orientation: portrait) {
   .welcome {
   background-image: url("../img/banner-mobile.jpg")
+  }
+
+  .logo {
+    width: 270px;
+  }
+
+  .flex-container{
+    flex-flow: column wrap;
+  }
+
+  .header-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    order: 1;
+    margin-top: 160px;
+  }
+
+  .title {
+    font-size: 26px;
+    line-height: 36px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+    width: 23px;
+    height: 20px;
+    position: relative;
+    z-index:2;
+    left: 50%;
+    margin-right: 15px;
+  }
+
+  .menu-btn span {
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: 9px;
+    left: 0;
+    background-color: #ffffff;
+  }
+  .menu-btn:before, .menu-btn:after {
+    content: '';
+    background-color: #ffffff;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+  }
+
+  .menu-btn:before {
+    top: 0;
+  }
+
+  .menu-btn:after {
+    bottom: 0;
+  }
+
+  .container-title {
+    margin-top: 40px;
   }
 
   .nav__list {
@@ -1018,16 +1106,47 @@ input {
     display: none;
   }
 
+  .trend-block {
+    width: 100%;
+    margin-bottom: 2px;
+  }
+
+  .main-content {
+    margin: auto;
+  }
+
   .block {
    display: block;
   }
 
+  .sections {
+    margin-left: 0;
+  }
+
   .wrap {
     flex-wrap: wrap;
+
   }
 
   .container-page {
     flex-wrap: wrap;
+    width: 100vw;
+  }
+
+  .search-block {
+    width: 100%;
+  }
+
+  .search-group {
+    width: 100%;
+  }
+
+  .search {
+    width: 100%;
+  }
+
+  .tags-container {
+    margin: auto;
   }
 
   .store {
@@ -1038,11 +1157,21 @@ input {
     width: 98%;
   }
 
-  .store-container {
-    width: 100vw;
+  .store-pic {
+    width: 100%;
   }
 
-  .one, .two, .three, .four {
-    width: 99%;
-  } 
+  .store-container {
+    width: 100vw;
+    margin-top: 43px;
+  }
+
+  .trend-header {
+    font-size: 16px;
+  }
+
+  .store-sub {
+    font-size: 17px;
+    margin-bottom: 12px;
+  }
 }
